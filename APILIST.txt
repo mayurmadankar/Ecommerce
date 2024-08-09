@@ -1,0 +1,14 @@
+ProductController
+Product - Done
+get Product Api :- DONE
+add a product -  done
+get one product -  done
+filter product - done (using query Parameters)
+rate product - 
+Add items to cart -
+Get items to cart -
+Remove items from cart -
+ 
+UserController 
+SignUp - Email,name,password,TypeOfUser(customer,seller)
+SignIn-(Email,password)
