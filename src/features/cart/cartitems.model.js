@@ -5,7 +5,7 @@ export default class CartItemModel {
         this.quantity = quantity;
         this.id = id;
     }
-
+    
     static add(productID, userID, quantity) {
         const cartItem = new CartItemModel(productID, userID, quantity);
         cartItem.id = cartItems.length + 1;

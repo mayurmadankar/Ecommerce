@@ -4,10 +4,10 @@ get Product Api :- DONE
 add a product -  done
 get one product -  done
 filter product - done (using query Parameters)
-rate product - 
-Add items to cart -
-Get items to cart -
-Remove items from cart -
+rate product - done
+Add items to cart - done 
+Get items to cart - done
+Remove items from cart - done
  
 UserController 
 SignUp - Email,name,password,TypeOfUser(customer,seller)
