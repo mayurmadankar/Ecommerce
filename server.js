@@ -1,5 +1,5 @@
 //1.import expres (third party import)
-import express from "express";
+import express, { application } from "express";
 import swagger from "swagger-ui-express";
 import cors from "cors";
 
@@ -14,6 +14,7 @@ import cartRouter from "./src/features/cart/cartitems.router.js";
 import apiDocs from "./swagger.json" assert { type: "json" };
 
 import loggerMiddleware from "./src/middleware/logger.middleware.js";
+import { errorHandlerMiddleware } from "./src/middleware/applicantionError.middleware.js";
 
 //2.create serv`er
 const server = express();
@@ -58,6 +59,9 @@ server.use("/api/users", userRouter);
 server.get("/", (req, res) => {
   res.send("Welcome to Ecommerce APIs");
 });
+
+//Error Handling Middleware in Application Level
+server.use(errorHandlerMiddleware); // from applicationError.middleware.js
 
 //if any one routes or api not found from above then it runs -> 4.middleware
 //4.Middleware to hande 404 requests
