@@ -1,21 +1,36 @@
-import fs from "fs";
+// src/middlewares/logger.middleware.js
 
-const fsPromises = fs.promises;
+import winston from "winston";
 
-async function log(logData) {
-  try {
-    logData = `\n\n${new Date().toString()} - ${logData}`;
-    await fsPromises.appendFile("log.txt", logData);
-  } catch (err) {
-    console.log(err);
-  }
-}
-const loggerMiddleware = async (req, res, next) => {
-  //1.log request body
-  if (!req.url.includes("signin")) {
-    const logData = `${req.url} - ${JSON.stringify(req.body)}`;
-    await log(logData);
-  }
+// Create a custom format that includes a timestamp
+const customFormat = winston.format.printf(({ timestamp, level, message }) => {
+  return `${timestamp} ${level}: ${message}`;
+});
+
+// Create a Winston logger instance
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.timestamp(), // Adds a timestamp to the log
+    customFormat // Custom format to include timestamp
+  ),
+  transports: [
+    new winston.transports.File({ filename: "combined.log" }) // Log to 'combined.log' file
+  ]
+});
+
+// Logger middleware function
+export const loggerMiddleware = (req, res, next) => {
+  // Construct the log message
+  const logData = `Request URL: ${req.url} | Request Body: ${JSON.stringify(
+    req.body
+  )}`;
+
+  // Log the request information
+  logger.info(logData);
+
+  // Proceed to the next middleware or route handler
   next();
 };
+
 export default loggerMiddleware;
