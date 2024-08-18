@@ -7,7 +7,7 @@ export class ApplicationError extends Error {
 export const errorHandlerMiddleware = (err, req, res, next) => {
   // Write your code here
   if (err instanceof ApplicationError) {
-    res.status(err.code).send(err.message);
+    return res.status(err.code).json({ error: err.message });
   } else {
     res.status(500).send("oops! something went wrong...Try again later!");
   }

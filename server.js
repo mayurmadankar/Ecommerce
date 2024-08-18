@@ -16,6 +16,9 @@ import apiDocs from "./swagger.json" assert { type: "json" };
 import loggerMiddleware from "./src/middleware/logger.middleware.js";
 import { errorHandlerMiddleware } from "./src/middleware/applicantionError.middleware.js";
 
+//import connectionn to the database
+import { connectToMOngoDB } from "./src/config/mongodb.js";
+
 //2.create serv`er
 const server = express();
 
@@ -76,4 +79,5 @@ server.use((req, res) => {
 //5.specify port
 server.listen(3000, () => {
   console.log("server is listening at port 3000");
+  connectToMOngoDB();
 });
