@@ -2,11 +2,14 @@ import { getDB } from "../../config/mongodb.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
 
 class UserRepository {
+  constructor() {
+    this.collection = "users";
+  }
   //to check the existing user
   async findByEmail(email) {
     try {
       const db = getDB();
-      const collection = db.collection("user");
+      const collection = db.collection(this.collection);
       const user = await collection.findOne({ email });
       return user;
     } catch (err) {
@@ -20,7 +23,7 @@ class UserRepository {
       // 1. Get the database
       const db = getDB();
       // 2. Get the collection
-      const collection = db.collection("user");
+      const collection = db.collection(this.collection);
       // 3. Insert the document into the collection
       await collection.insertOne(newUser);
       return newUser;
@@ -35,7 +38,7 @@ class UserRepository {
       // 1. Get the database
       const db = getDB();
       // 2. Get the collection
-      const collection = db.collection("user");
+      const collection = db.collection(this.collection);
       // 3. Insert the document into the collection
       return await collection.findOne({ email, password });
     } catch (err) {

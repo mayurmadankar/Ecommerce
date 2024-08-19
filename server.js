@@ -1,3 +1,5 @@
+import "./env.js";
+
 //1.import expres (third party import)
 import express, { application } from "express";
 import swagger from "swagger-ui-express";

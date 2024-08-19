@@ -2,8 +2,8 @@ import UserModel from "../user/user.model.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
 
 class ProductModel {
-  constructor(id, name, desc, price, imageUrl, category, sizes) {
-    this.id = id;
+  constructor(name, desc, price, imageUrl, category, sizes, id) {
+    this._id = id;
     this.name = name;
     this.desc = desc;
     this.price = price;

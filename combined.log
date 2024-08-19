@@ -1,94 +1,44 @@
-2024-08-14T07:18:01.065Z info: Request URL: /api/products/ | Request Body: {}
-2024-08-14T09:27:22.314Z info: Request URL: /api/users/signin | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:28:49.673Z info: Request URL: /api/users/signin | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:33:51.570Z info: Request URL: /api/product/rateproduct?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:34:13.616Z info: Request URL: /api/products/rateproduct?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:34:37.081Z info: Request URL: /api/products/rateproduct?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:34:43.020Z info: Request URL: /api/products/rateproduct?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:35:05.661Z info: Request URL: /api/products/rate?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:37:14.209Z info: Request URL: /api/products/rate?userID=2&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T09:37:24.824Z info: Request URL: /api/products/rate?userID=11&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:07:16.113Z info: Request URL: /api/products/rate?userID=11&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:07:54.446Z info: Request URL: /api/products/rate?userID=11&productID=10&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:08:02.691Z info: Request URL: /api/products/rate?userID=11&productID=2&rating=10 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:08:10.201Z info: Request URL: /api/products/rate?userID=1&productID=2&rating=101 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:08:25.385Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:09:04.037Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:13:45.126Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:13:57.234Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:19:14.581Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:19:37.717Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T10:20:34.456Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:55:56.379Z info: Request URL: /api/products/rate?userID=1&productID=21&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:56:03.165Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1"}
-2024-08-14T12:56:07.713Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1"}
-2024-08-14T12:56:13.242Z info: Request URL: /api/users/signin | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:56:23.985Z info: Request URL: /api/products/ | Request Body: {}
-2024-08-14T12:56:50.318Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1"}
-2024-08-14T12:57:02.802Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1"}
-2024-08-14T12:57:10.108Z info: Request URL: /api/users/signin | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:57:19.543Z info: Request URL: /api/products/ | Request Body: {}
-2024-08-14T12:57:29.532Z info: Request URL: /api/products/ | Request Body: {}
-2024-08-14T12:57:56.912Z info: Request URL: /api/products/rate?userID=1&productID=2&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:58:13.313Z info: Request URL: /api/products/rate?userID=1&productID=2&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-14T12:58:30.577Z info: Request URL: /api/products/rate?userID=1&productID=2&rating=11 | Request Body: {"email":"customer@com.com","password":"Password2"}
-2024-08-18T14:31:40.510Z info: Request URL: /api/users/signin | Request Body: {"email":"seller@com.com","password":"password1","name":"seller User","type":"seller"}
-2024-08-18T14:32:08.633Z info: Request URL: /api/users/signin | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:33:57.820Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:35:06.044Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:35:51.256Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:36:54.532Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:39:29.934Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T14:41:27.271Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:31:42.594Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:34:46.816Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:36:58.957Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:38:46.997Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:39:36.121Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:39:50.921Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:44:11.701Z info: Request URL: /api/users/signup | Request Body: {"email":"seller@com.com","password":"Password1","name":"seller User","type":"seller"}
-2024-08-18T17:47:48.941Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T17:50:09.110Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T17:53:44.938Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T17:54:42.974Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T17:56:16.212Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T17:58:55.642Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:01:48.007Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:03:34.629Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:04:44.606Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:05:44.532Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:06:01.537Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:06:31.482Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User","email":"seller@com.com","password":"Password1","type":"seller"}
-2024-08-18T18:07:42.238Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller@com.com","password":"Password2","type":"seller"}
-2024-08-18T18:07:48.536Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller@com.com","password":"Password2","type":"seller"}
-2024-08-18T18:07:49.067Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller@com.com","password":"Password2","type":"seller"}
-2024-08-18T18:07:50.136Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller@com.com","password":"Password2","type":"seller"}
-2024-08-18T18:07:57.386Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller@com.comm","password":"Password2","type":"seller"}
-2024-08-18T18:08:32.873Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 2","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:09:32.598Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:19:06.410Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:24:43.207Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:25:44.360Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:27:33.816Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:31:13.767Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:32:23.901Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:33:51.587Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:35:38.783Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:37:47.614Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:38:22.646Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:38:43.689Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:39:57.479Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:40:01.934Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:44:10.928Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:48:11.290Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 3","email":"seller2@com.com","password":"Password2","type":"seller"}
-2024-08-18T19:51:27.384Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 4","email":"seller4@com.com","password":"Password4","type":"seller4"}
-2024-08-18T20:09:39.403Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com@com.com","password":"Password4"}
-2024-08-18T20:09:52.875Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:11:24.117Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:13:51.381Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:14:15.381Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:15:04.203Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:17:51.637Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:21:11.277Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:21:25.856Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
-2024-08-18T20:22:16.999Z info: Request URL: /api/users/signin | Request Body: {"email":"seller4@com.com","password":"Password4"}
+2024-08-19T06:56:19.794Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T06:56:19.794Z info: Request URL: /signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T06:59:21.077Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T06:59:21.078Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T16:37:44.395Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T16:40:31.894Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T16:41:13.943Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T16:41:13.944Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T16:42:14.531Z info: Request URL: /api/users/signin | Request Body: {"email":"seller6@com.com","password":"Password6"}
+2024-08-19T16:42:14.532Z info: Request URL: /signin | Request Body: {"email":"seller6@com.com","password":"Password6"}
+2024-08-19T16:43:42.858Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T16:43:42.858Z info: Request URL: /signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T16:44:04.742Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T16:44:04.743Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T16:44:24.387Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T16:45:15.092Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T17:02:37.228Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T17:02:37.233Z info: Request URL: /signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T17:03:29.657Z info: Request URL: /api/users/signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T17:03:29.658Z info: Request URL: /signup | Request Body: {"name":"seller User 7","email":"seller7@com.com","password":"Password7","type":"seller7"}
+2024-08-19T17:03:45.041Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T17:03:45.042Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T17:04:09.541Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T17:06:27.875Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T17:15:40.593Z info: Request URL: /api/products/ | Request Body: {}
+2024-08-19T17:16:26.582Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:21:37.422Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:25:09.970Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:26:27.469Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:29:50.132Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:44:20.885Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:57:58.067Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T17:59:13.831Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:05:01.611Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:05:23.333Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T18:05:23.334Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-19T18:05:48.203Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:07:36.517Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:15:11.377Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:18:01.480Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:18:22.512Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:20:03.820Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:21:21.448Z info: Request URL: /api/products/66c37b093b561d1410496d31 | Request Body: {}
+2024-08-19T18:22:28.028Z info: Request URL: /api/products/?id=66c37b093b561d1410496d31 | Request Body: {}

@@ -1,14 +1,16 @@
 import express from "express";
 import { UserController } from "./user.controller.js";
+import loggerMiddleware from "../../middleware/logger.middleware.js"; // Import the logger middleware
 
 const userRouter = express.Router();
-
 const userController = new UserController();
 
-userRouter.post("/signup", (req, res, next) => {
+// Apply the logger middleware and then proceed to the controller methods
+userRouter.post("/signup", loggerMiddleware, (req, res, next) => {
   userController.signUp(req, res, next);
 });
-userRouter.post("/signin", (req, res, next) => {
+
+userRouter.post("/signin", loggerMiddleware, (req, res, next) => {
   userController.signIn(req, res, next);
 });
 
