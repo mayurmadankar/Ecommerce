@@ -1,6 +1,7 @@
 import { ObjectId } from "mongodb";
 import { getDB } from "../../config/mongodb.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
+import { parse } from "dotenv";
 
 export default class ProductRepository {
   constructor() {
@@ -34,6 +35,42 @@ export default class ProductRepository {
       const db = getDB();
       const collection = db.collection(this.collection);
       return await collection.findOne({ _id: new ObjectId(id) });
+    } catch (err) {
+      console.log(err);
+      throw new ApplicationError("Something went wrong with database", 500);
+    }
+  }
+  async filter(minPrice, maxPrice, category) {
+    try {
+      const db = getDB();
+      const collection = db.collection(this.collection);
+      let filterExpression = {};
+      if (minPrice) {
+        filterExpression.price = { $gte: parseFloat(minPrice) };
+      }
+      if (maxPrice) {
+        filterExpression.price = {
+          ...filterExpression.price,
+          $lte: parseFloat(maxPrice)
+        };
+      }
+      if (category) {
+        filterExpression.category = category;
+      }
+      return collection.find(filterExpression).toArray();
+    } catch (err) {
+      console.log(err);
+      throw new ApplicationError("Something went wrong with database", 500);
+    }
+  }
+  async rateProduct(userID, productID, rating) {
+    try {
+      const db = getDB();
+      const collection = db.collection(this.collection);
+      collection.updateOne(
+        { _id: new ObjectId(productID) },
+        { $push: { ratings: { userID: new Object(userID), rating } } }
+      );
     } catch (err) {
       console.log(err);
       throw new ApplicationError("Something went wrong with database", 500);

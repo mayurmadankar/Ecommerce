@@ -5,6 +5,7 @@ class ProductController {
   constructor() {
     this.productRepository = new ProductRepository();
   }
+  //integrated with mongodb and product.repository.js
   async getAllProducts(req, res) {
     try {
       const products = await this.productRepository.getAll();
@@ -13,7 +14,7 @@ class ProductController {
       return res.status(200).send("Sommthing  went Wrong");
     }
   }
-
+  //integrated with mongodb and product.repository.js
   async addProduct(req, res) {
     try {
       const { name, price, sizes } = req.body;
@@ -32,20 +33,21 @@ class ProductController {
       res.status(400).send("Something went wrong");
     }
   }
-  rateProduct(req, res, next) {
+  async rateProduct(req, res, next) {
     try {
-      const { userID, productID, rating } = req.query;
-      try {
-        ProductModel.rateProduct(userID, productID, rating);
-      } catch (err) {
-        return res.status(400).send(err.message);
-      }
+      // const { userID, productID, rating } = req.query;
+      const userID = req.userID;
+      const productID = req.query.productID;
+      const rating = req.query.rating;
+
+      await this.productRepository.rateProduct(userID, productID, rating);
       return res.status(200).send("Rating as been added");
     } catch (err) {
       console.log("passing error to middleware");
       next(err);
     }
   }
+  //integrated with mongodb and product.repository.js
   async getOneProduct(req, res) {
     try {
       const id = req.params.id;
@@ -60,13 +62,22 @@ class ProductController {
       return res.status(200).send("Something went wrong");
     }
   }
-
-  filterProducts(req, res) {
-    const minPrice = req.query.minPrice;
-    const maxPrice = req.query.maxPrice;
-    const category = req.query.category;
-    const result = ProductModel.filter(minPrice, maxPrice, category);
-    res.status(200).send(result);
+  //integrated with mongodb and product.repository.js
+  async filterProducts(req, res) {
+    try {
+      const minPrice = req.query.minPrice;
+      const maxPrice = req.query.maxPrice;
+      const category = req.query.category;
+      const result = await this.productRepository.filter(
+        minPrice,
+        maxPrice,
+        category
+      );
+      res.status(200).send(result);
+    } catch (err) {
+      console.log(err);
+      return res.status(200).send("Something went wrong");
+    }
   }
   updateProduct(req, res) {
     const updated = ProductModel.update(req.params.id, req.body);

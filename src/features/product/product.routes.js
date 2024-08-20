@@ -12,7 +12,12 @@ const productController = new ProductController();
 
 //all the paths to the controller method
 //localhost/api/products
-productRouter.get("/filter", productController.filterProducts);
+productRouter.get("/filter", (req, res) => {
+  productController.filterProducts(req, res);
+});
+productRouter.post("/rate", (req, res) => {
+  productController.rateProduct(req, res);
+});
 productRouter.get("/", (req, res) => {
   productController.getAllProducts(req, res);
 });
@@ -24,6 +29,5 @@ productRouter.get("/:id", (req, res) => {
 });
 productRouter.put("/:id", productController.updateProduct);
 productRouter.delete("/:id", productController.deleteProduct);
-productRouter.post("/rate", productController.rateProduct);
 
 export default productRouter;
