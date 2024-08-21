@@ -92,6 +92,7 @@ export default class ProductRepository {
   //     throw new ApplicationError("Something went wrong with database", 500);
   //   }
   // }
+
   // rate the product it is easy way
   async rateProduct(userID, productID, rating) {
     try {
