@@ -67,3 +67,12 @@
 2024-08-20T21:05:34.986Z info: Request URL: /api/products/rate?productID=66c4eb91ff97247da0616a05&rating=5 | Request Body: {}
 2024-08-20T21:10:42.449Z info: Request URL: /api/products/rate?productID=66c4eb91ff97247da0616a05&rating=6 | Request Body: {}
 2024-08-20T21:14:27.533Z info: Request URL: /api/products/rate?productID=66c4eb91ff97247da0616a05&rating=6 | Request Body: {}
+2024-08-21T11:32:54.010Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-21T11:32:54.020Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-21T11:33:08.843Z info: Request URL: /api/products/rate?productID=66c4eb91ff97247da0616a05&rating=7 | Request Body: {}
+2024-08-21T11:45:01.520Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":"3.2"}
+2024-08-21T11:46:31.198Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":3.2}
+2024-08-21T11:47:52.006Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":3.2}
+2024-08-21T12:16:03.980Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4.2}
+2024-08-21T12:34:47.362Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":1.2}
+2024-08-21T12:36:38.265Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":1.2}

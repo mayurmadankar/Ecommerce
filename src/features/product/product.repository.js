@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { getDB } from "../../config/mongodb.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
-import { parse } from "dotenv";
+// import { parse } from "dotenv";
 
 export default class ProductRepository {
   constructor() {
@@ -63,13 +63,53 @@ export default class ProductRepository {
       throw new ApplicationError("Something went wrong with database", 500);
     }
   }
+  // async rateProduct(userID, productID, rating) {
+  //   try {
+  //     const db = getDB();
+  //     const collection = db.collection(this.collection);
+  //     //1.find the product
+  //     const product = await collection.findOne({
+  //       _id: new ObjectId(productID)
+  //     });
+  //     //2.find the ratings
+  //     const userRating = product?.ratings?.find((r) => r.userID == userID);
+  //     if (userRating) {
+  //       await collection.updateOne(
+  //         {
+  //           _id: new ObjectId(productID),
+  //           "ratings.userID": new ObjectId(userID)
+  //         },
+  //         { $set: { "ratings.$.rating": rating } }
+  //       );
+  //     } else {
+  //       await collection.updateOne(
+  //         { _id: new ObjectId(productID) },
+  //         { $push: { ratings: { userID: new ObjectId(userID), rating } } }
+  //       );
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     throw new ApplicationError("Something went wrong with database", 500);
+  //   }
+  // }
+  // rate the product it is easy way
   async rateProduct(userID, productID, rating) {
     try {
       const db = getDB();
       const collection = db.collection(this.collection);
-      collection.updateOne(
+      //pull existing rating and update them
+      await collection.updateOne(
+        {
+          _id: new ObjectId(productID)
+        },
+        {
+          $pull: { ratings: { userID: new ObjectId(userID) } }
+        }
+      );
+      //push the rating if there is no one
+      await collection.updateOne(
         { _id: new ObjectId(productID) },
-        { $push: { ratings: { userID: new Object(userID), rating } } }
+        { $push: { ratings: { userID: new ObjectId(userID), rating } } }
       );
     } catch (err) {
       console.log(err);

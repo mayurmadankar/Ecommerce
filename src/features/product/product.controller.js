@@ -1,4 +1,3 @@
-import ProductModel from "./product.model.js";
 import ProductRepository from "./product.repository.js";
 
 class ProductController {
@@ -37,8 +36,8 @@ class ProductController {
     try {
       // const { userID, productID, rating } = req.query;
       const userID = req.userID;
-      const productID = req.query.productID;
-      const rating = req.query.rating;
+      const productID = req.body.productID;
+      const rating = req.body.rating;
 
       await this.productRepository.rateProduct(userID, productID, rating);
       return res.status(200).send("Rating as been added");
