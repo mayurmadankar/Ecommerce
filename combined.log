@@ -94,3 +94,12 @@
 2024-08-21T18:49:06.708Z info: Request URL: /api/cartItems | Request Body: {}
 2024-08-21T19:25:16.094Z info: Request URL: /api/cartItems/66c631d7d04035f274004077 | Request Body: {}
 2024-08-21T19:25:54.565Z info: Request URL: /api/cartItems/66c631d7d04035f274004077 | Request Body: {}
+2024-08-22T09:11:27.806Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-22T09:11:27.809Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-22T09:11:51.498Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c4eb91ff97247da0616a05","quantity":2}
+2024-08-22T09:12:06.007Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c4eb91ff97247da0616a05","quantity":3}
+2024-08-22T09:45:55.612Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c4eb91ff97247da0616a05","quantity":3}
+2024-08-22T09:46:43.144Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c4eb91ff97247da0616a05","quantity":5}
+2024-08-22T09:47:10.499Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c4eb91ff97247da0616a05","quantity":-4}
+2024-08-22T09:49:21.981Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c37b093b561d1410496d31","quantity":-4}
+2024-08-22T09:49:39.218Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c37b093b561d1410496d31","quantity":10}

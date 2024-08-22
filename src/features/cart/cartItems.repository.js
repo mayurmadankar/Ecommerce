@@ -11,11 +11,13 @@ export default class CartItemsRepository {
     try {
       const db = getDB();
       const collection = db.collection(this.collection);
-      await collection.insertOne({
+      const query = {
         productID: new ObjectId(productID),
-        userID: new ObjectId(userID),
-        quantity
-      });
+        userID: new ObjectId(userID)
+      };
+      const update = { $inc: { quantity: quantity } };
+      const options = { upsert: true };
+      await collection.updateOne(query, update, options);
     } catch (err) {
       console.log(err);
       throw new ApplicationError(
