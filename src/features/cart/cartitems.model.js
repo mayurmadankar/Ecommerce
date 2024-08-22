@@ -1,24 +1,29 @@
 export default class CartItemModel {
-  constructor(productID, userID, quantity, id) {
+  constructor(id, productID, userID, quantity) {
+    this.id = id; // Unique identifier for each cart item
     this.productID = productID;
     this.userID = userID;
     this.quantity = quantity;
-    this.id = id;
   }
+
   static get(userID) {
-    // console.log(cartItems);
-    return cartItems.filter((i) => i.userID == userID);
+    return CartItemModel.cartItems.filter((i) => i.userID == userID);
   }
+
   static delete(cartItemID, userID) {
-    const cartItemIndex = cartItems.findIndex(
+    const cartItemIndex = CartItemModel.cartItems.findIndex(
       (i) => i.id == cartItemID && i.userID == userID
     );
-    if (cartItemIndex == -1) {
+    if (cartItemIndex === -1) {
       return "Item not found";
     } else {
-      cartItems.splice(cartItemIndex, 1);
+      CartItemModel.cartItems.splice(cartItemIndex, 1);
     }
   }
 }
 
-var cartItems = [new CartItemModel(1, 2, 1, 1), new CartItemModel(1, 1, 2, 2)];
+// Initialize the cartItems array within the class
+CartItemModel.cartItems = [
+  new CartItemModel(1, 1, 2, 1),
+  new CartItemModel(2, 1, 1, 2)
+];
