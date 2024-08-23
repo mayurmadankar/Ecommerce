@@ -1,6 +1,6 @@
 export default class CartItemModel {
   constructor(id, productID, userID, quantity) {
-    this.id = id; // Unique identifier for each cart item
+    this._id = id; // Unique identifier for each cart item
     this.productID = productID;
     this.userID = userID;
     this.quantity = quantity;

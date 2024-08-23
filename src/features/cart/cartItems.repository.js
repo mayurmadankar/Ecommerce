@@ -12,6 +12,7 @@ export default class CartItemsRepository {
       const db = getDB();
       const collection = db.collection(this.collection);
       const id = await this.getNextCounter(db);
+      console.log(id);
       const query = {
         productID: new ObjectId(productID),
         userID: new ObjectId(userID)
@@ -62,13 +63,22 @@ export default class CartItemsRepository {
   }
 
   async getNextCounter(db) {
-    const query = { _id: "cartItemId" };
-    const update = { $inc: { value: 1 } };
-    const options = { returnDocument: "after" };
-    const resultDocument = await db
-      .collection("counters")
-      .findOneAndUpdate(query, update, options);
-    console.log(resultDocument);
-    return resultDocument.value.value;
+    try {
+      const query = { _id: "cartItemId" };
+      const update = { $inc: { value: 1 } };
+      const options = { returnDocument: "after" };
+
+      const resultDocument = await db
+        .collection("counters")
+        .findOneAndUpdate(query, update, options);
+
+      if (!resultDocument.value) {
+        throw new Error("Counter document not found or failed to update");
+      }
+      return resultDocument.value;
+    } catch (error) {
+      console.error("Error incrementing counter:", error);
+      throw error;
+    }
   }
 }

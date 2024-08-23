@@ -1,5 +1,5 @@
 import ProductRepository from "./product.repository.js";
-
+import ProductModel from "./product.model.js";
 class ProductController {
   constructor() {
     this.productRepository = new ProductRepository();
@@ -65,12 +65,12 @@ class ProductController {
   async filterProducts(req, res) {
     try {
       const minPrice = req.query.minPrice;
-      const maxPrice = req.query.maxPrice;
-      const category = req.query.category;
+      // const maxPrice = req.query.maxPrice;
+      const categories = req.query.categories;
       const result = await this.productRepository.filter(
         minPrice,
-        maxPrice,
-        category
+        // maxPrice,
+        categories
       );
       res.status(200).send(result);
     } catch (err) {
