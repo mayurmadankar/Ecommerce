@@ -174,3 +174,13 @@
 2024-08-23T18:14:02.142Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
 2024-08-23T18:15:34.275Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
 2024-08-23T18:16:36.119Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-24T17:05:20.917Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-24T17:05:20.921Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-24T17:07:43.399Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:10:53.162Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:11:17.746Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:13:05.355Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:15:27.853Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:17:43.580Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:30:28.715Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-24T17:31:25.230Z info: Request URL: /api/orders/ | Request Body: {}

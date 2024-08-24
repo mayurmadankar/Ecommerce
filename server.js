@@ -20,6 +20,7 @@ import { errorHandlerMiddleware } from "./src/middleware/applicantionError.middl
 
 //import connectionn to the database
 import { connectToMOngoDB } from "./src/config/mongodb.js";
+import OrderRouter from "./src/features/order/order.routes.js";
 
 //2.create serv`er
 const server = express();
@@ -31,19 +32,7 @@ var corsOptions = {
 
 server.use(cors(corsOptions));
 
-// server.use((req,res,next)=>{
-//     res.header('Access-Control-Allow-Origin','http://localhost:5500');
-//     res.header('Access-Control-Allow-Headers','*');
-//     res.header('Access-Control-Allow-Methods','*');
-//     //return ok for preflight request
-//      if(req.method=="OPTIONS"){
-//         return res.sendStatus(200);
-//     }
-//     next();
-// })
-
 server.use(express.json());
-
 //to parse the data from JSON format to req.body
 server.use(bodyParser.json());
 
@@ -59,6 +48,8 @@ server.use("/api/products", jwtAuth, productRouter);
 server.use("/api/cartItems", jwtAuth, cartRouter);
 //for all APIs of users,redirect to or from userRouter
 server.use("/api/users", userRouter);
+//for all APIs of OrderRouter,redirect from OrderRouter
+server.use("/api/orders", jwtAuth, OrderRouter);
 
 //3.Default request handler
 server.get("/", (req, res) => {
