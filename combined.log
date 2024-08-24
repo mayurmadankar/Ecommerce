@@ -161,3 +161,16 @@
 2024-08-23T12:38:07.509Z info: Request URL: /api/products/filter?category=cat4&minPrice=90000 | Request Body: {}
 2024-08-23T12:38:39.270Z info: Request URL: /api/products/filter?category=cat4&minPrice=70000 | Request Body: {}
 2024-08-23T12:54:59.694Z info: Request URL: /api/products/filter?minPrice=70000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T17:49:00.539Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T17:49:08.304Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-23T17:49:08.305Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-23T17:49:57.643Z info: Request URL: /api/users/signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-23T17:49:57.653Z info: Request URL: /signin | Request Body: {"email":"seller7@com.com","password":"Password7"}
+2024-08-23T17:50:30.393Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T17:52:53.270Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T18:08:52.582Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T18:10:29.603Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":2.5}
+2024-08-23T18:13:36.029Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T18:14:02.142Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T18:15:34.275Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}
+2024-08-23T18:16:36.119Z info: Request URL: /api/products/filter?minPrice=20000&category=[cat1,cat4] | Request Body: {}

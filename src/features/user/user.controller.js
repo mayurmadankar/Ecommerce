@@ -51,7 +51,7 @@ export class UserController {
             { expiresIn: "5h" }
           );
           //4.return token to client
-          return res.status(200).json({ token: token });
+          return res.status(200).send(token);
         } else {
           return res.status(400).send("Invalid Credentials");
         }
