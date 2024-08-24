@@ -12,3 +12,32 @@ Remove items from cart - done
 UserController 
 SignUp - Email,name,password,TypeOfUser(customer,seller)
 SignIn-(Email,password)
+
+db.products.aggregate([
+    {
+        $unwind:"$ratings"
+    },
+    {
+        $group:{
+            _id:"$name",
+            averageratings:{$avg:"$ratings.rating"}
+        }
+    }
+])
+
+db.products.aggregate([
+    //1.project anme of product,and counnntOfRating
+    {
+        $project:{name:1,countOfRating:{
+            $cond:{if:{$isArray:"$ratings"},then:{$size:"$ratings"},else:0}
+        }}
+    },
+    {
+        //stage 2. Sort the collection 
+        $sort:{countOfRating:-1}
+    },
+    {
+        //3.limit to just 1 item in result
+        $limit:1
+    }
+])

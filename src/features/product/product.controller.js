@@ -78,6 +78,17 @@ class ProductController {
       return res.status(200).send("Something went wrong");
     }
   }
+  async averagePrice(req, res, next) {
+    try {
+      const result =
+        await this.productRepository.averageProductPricePerCategory();
+      res.status(200).send(result);
+    } catch (err) {
+      console.log(err);
+      return res.status(400).send("Something went wrong in the average Proce ");
+    }
+  }
+
   updateProduct(req, res) {
     const updated = ProductModel.update(req.params.id, req.body);
     if (!updated) {

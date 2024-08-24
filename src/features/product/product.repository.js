@@ -93,4 +93,21 @@ export default class ProductRepository {
       throw new ApplicationError("Something went wrong with database", 500);
     }
   }
+  async averageProductPricePerCategory() {
+    try {
+      const db = getDB();
+      await db
+        .collection(this.collection)
+        .aggregate([
+          {
+            //stage 1 : Get average price per category
+            $group: { _id: "category", averagePrice: { $avg: "$price" } }
+          }
+        ])
+        .toArray();
+    } catch (err) {
+      console.log(err);
+      throw new ApplicationError("Something went wrong with database", 500);
+    }
+  }
 }
