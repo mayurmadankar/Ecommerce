@@ -1,5 +1,5 @@
 import { ObjectId, Timestamp } from "mongodb";
-import { getDB } from "../../config/mongodb.js";
+import { getClient, getDB } from "../../config/mongodb.js";
 import OrderModel from "./order.model.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
 
@@ -9,11 +9,13 @@ export default class OrderRepository {
   }
   async placeOrder(userId) {
     try {
+      const client = getClient();
+      const session = client.startSession();
       const db = getDB();
-
+      session.startTransaction();
       //1. Get cartItems and calculate the total amounnt.
-      const items = await this.getTotalAmount(userId);
-      console.log(items);
+      const items = await this.getTotalAmount(userId, session);
+      // console.log(items);
       const finalTotalAmount = items.reduce(
         (acc, item) => acc + item.totalAmount,
         0
@@ -34,49 +36,56 @@ export default class OrderRepository {
           .collection("products")
           .updateOne(
             { _id: item.productID },
-            { $inc: { stock: -item.quantity } }
+            { $inc: { stock: -item.quantity } },
+            { session }
           );
       }
 
       //4. Clear the cart Items.
-      await db.collection("cartItems").deleteMany({
-        userId: new ObjectId(userId)
-      });
+      await db.collection("cartItems").deleteMany(
+        {
+          userId: new ObjectId(userId)
+        },
+        { session }
+      );
     } catch (err) {
       console.log(err);
       throw new ApplicationError("Something went wrong in placeOrder", 500);
     }
   }
-  async getTotalAmount(userId) {
+  async getTotalAmount(userId, session) {
     const db = getDB();
     const items = await db
       .collection("cartItems")
-      .aggregate([
-        //1.Get cart items for the user
-        {
-          $match: { userID: new ObjectId(userId) }
-        },
-        //2.Get the product from products collection based on the productID from cartItems collections
-        {
-          $lookup: {
-            from: "products",
-            localField: "productID",
-            foreignField: "_id",
-            as: "productInfo"
+      .aggregate(
+        [
+          //1.Get cart items for the user
+          {
+            $match: { userID: new ObjectId(userId) }
+          },
+          //2.Get the product from products collection based on the productID from cartItems collections
+          {
+            $lookup: {
+              from: "products",
+              localField: "productID",
+              foreignField: "_id",
+              as: "productInfo"
+            }
+          },
+          //3.unwind the productInfo
+          {
+            $unwind: "$productInfo"
+          },
+          //4.calculate totalAmount for each cartItems.
+          //adding the addField into the cartitems document
+          {
+            $addFields: {
+              totalAmount: { $multiply: ["$productInfo.price", "$quantity"] }
+            }
           }
-        },
-        //3.unwind the productInfo
-        {
-          $unwind: "$productInfo"
-        },
-        //4.calculate totalAmount for each cartItems.
-        //adding the addField into the cartitems document
-        {
-          $addFields: {
-            totalAmount: { $multiply: ["$productInfo.price", "$quantity"] }
-          }
-        }
-      ])
+        ],
+        { session }
+      )
       .toArray();
     console.log(items);
     return items;

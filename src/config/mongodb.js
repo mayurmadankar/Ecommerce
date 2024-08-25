@@ -14,6 +14,10 @@ export const connectToMOngoDB = () => {
       console.log(err);
     });
 };
+//returing the instance of the mongoDb client
+export const getClient = () => {
+  return client;
+};
 export const getDB = () => {
   return client.db();
 };

@@ -43,7 +43,7 @@ export default class ProductRepository {
   async filter(minPrice, categories) {
     try {
       const db = getDB();
-      const collection = db.collection(this.collection);
+      const collection = await db.collection(this.collection);
       let filterExpression = {};
       if (minPrice) {
         filterExpression.price = { $gte: parseFloat(minPrice) };
