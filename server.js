@@ -21,6 +21,7 @@ import { errorHandlerMiddleware } from "./src/middleware/applicantionError.middl
 //import connectionn to the database
 import { connectToMOngoDB } from "./src/config/mongodb.js";
 import OrderRouter from "./src/features/order/order.routes.js";
+import { connectUsingMongoose } from "./src/config/mongoseConfig.js";
 
 //2.create serv`er
 const server = express();
@@ -72,5 +73,6 @@ server.use((req, res) => {
 //5.specify port
 server.listen(3000, () => {
   console.log("server is listening at port 3000");
-  connectToMOngoDB();
+  // connectToMOngoDB();
+  connectUsingMongoose();
 });
