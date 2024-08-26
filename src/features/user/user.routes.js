@@ -1,6 +1,7 @@
 import express from "express";
 import { UserController } from "./user.controller.js";
 import loggerMiddleware from "../../middleware/logger.middleware.js"; // Import the logger middleware
+import jwtAuth from "../../middleware/jwt.middleware.js";
 
 const userRouter = express.Router();
 const userController = new UserController();
@@ -13,5 +14,7 @@ userRouter.post("/signup", loggerMiddleware, (req, res, next) => {
 userRouter.post("/signin", loggerMiddleware, (req, res, next) => {
   userController.signIn(req, res, next);
 });
-
+userRouter.put("/resetPassword", jwtAuth, (req, res, next) => {
+  userController.resetPassword(req, res, next);
+});
 export default userRouter;

@@ -1,50 +1,50 @@
-import { getDB } from "../../config/mongodb.js";
+import mongoose from "mongoose";
+import { userSchema } from "./user.Schema.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
 
-class UserRepository {
-  constructor() {
-    this.collection = "users";
-  }
-  //to check the existing user
-  async findByEmail(email) {
+//creating the model from schema
+const UserModel = mongoose.model("User", userSchema);
+
+export default class UserRepository {
+  async signUp(user) {
     try {
-      const db = getDB();
-      const collection = db.collection(this.collection);
-      const user = await collection.findOne({ email });
-      return user;
-    } catch (err) {
-      console.log(err);
-      throw new ApplicationError("Error while checking email in database", 500);
-    }
-  }
-  //to push the sign up data in database
-  async signUp(newUser) {
-    try {
-      // 1. Get the database
-      const db = getDB();
-      // 2. Get the collection
-      const collection = db.collection(this.collection);
-      // 3. Insert the document into the collection
-      await collection.insertOne(newUser);
+      //create the instance of the userModel
+      const newUser = new UserModel(user);
+      await newUser.save();
       return newUser;
     } catch (err) {
       console.log(err);
       throw new ApplicationError("Something went wrong with database", 500);
     }
   }
-  //to sign in the user
   async signIn(email, password) {
     try {
-      // 1. Get the database
-      const db = getDB();
-      // 2. Get the collection
-      const collection = db.collection(this.collection);
-      // 3. Insert the document into the collection
-      return await collection.findOne({ email, password });
+      return await UserModel.findOne(email, password);
     } catch (err) {
       console.log(err);
-      throw new ApplicationError("Error during sign in", 500);
+      throw new ApplicationError("Something went wrong with database", 500);
+    }
+  }
+  async findByEmail(email) {
+    try {
+      return await UserModel.findOne({ email });
+    } catch (err) {
+      console.log(err);
+      throw new ApplicationError("Error while checking email in database", 500);
+    }
+  }
+  async resetPassword(newPassword, userID) {
+    try {
+      let user = await UserModel.findById(userID);
+      if (user) {
+        user.password = newPassword;
+        user.save();
+      } else {
+        throw new Error("User not found");
+      }
+    } catch (err) {
+      console.log(err);
+      throw new ApplicationError("Error while checking email in database", 500);
     }
   }
 }
-export default UserRepository;

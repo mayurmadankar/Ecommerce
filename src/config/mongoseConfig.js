@@ -12,7 +12,7 @@ export const connectUsingMongoose = () => {
         useUnifiedTopology: true
       })
       .then(() => {
-        console.log("MongoDB using mongoose is connected");
+        console.log("MongoDB connected using mongoose");
       })
       .catch((err) => console.log(err));
   } catch (err) {

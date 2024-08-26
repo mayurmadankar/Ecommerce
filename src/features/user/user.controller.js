@@ -61,4 +61,19 @@ export class UserController {
       next(new ApplicationError("Problem With sign In", 400));
     }
   }
+  async resetPassword(req, res, next) {
+    const { newPassword } = req.body;
+    const userID = req.userID;
+    const hashPassword = await bcrypt.hash(newPassword, 12);
+    try {
+      const result = await this.userRepository.resetPassword(
+        hashPassword,
+        userID
+      );
+      res.status(200).send("Password Reset successfully");
+    } catch (err) {
+      console.log(err);
+      next(new ApplicationError("Something is wrong in sign up", 500));
+    }
+  }
 }
