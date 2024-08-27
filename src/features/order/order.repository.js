@@ -8,9 +8,9 @@ export default class OrderRepository {
     this.collection = "orders";
   }
   async placeOrder(userId) {
+    const client = getClient();
+    const session = client.startSession();
     try {
-      const client = getClient();
-      const session = client.startSession();
       const db = getDB();
       session.startTransaction();
       //1. Get cartItems and calculate the total amounnt.
@@ -40,15 +40,20 @@ export default class OrderRepository {
             { session }
           );
       }
-
+      // throw new Error("Somethingis wrong in placeOrder");
       //4. Clear the cart Items.
       await db.collection("cartItems").deleteMany(
         {
-          userId: new ObjectId(userId)
+          userID: new ObjectId(userId)
         },
         { session }
       );
+      //showing that there is no uncomplete transaction in database
+      session.commitTransaction();
+      session.endSession();
     } catch (err) {
+      await session.abortTransaction();
+      session.endSession();
       console.log(err);
       throw new ApplicationError("Something went wrong in placeOrder", 500);
     }

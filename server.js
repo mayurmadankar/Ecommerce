@@ -73,6 +73,6 @@ server.use((req, res) => {
 //5.specify port
 server.listen(3000, () => {
   console.log("server is listening at port 3000");
-  // connectToMOngoDB();
-  connectUsingMongoose();
+  connectToMOngoDB();
+  // connectUsingMongoose();
 });
