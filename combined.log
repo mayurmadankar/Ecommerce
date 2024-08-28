@@ -232,3 +232,19 @@
 2024-08-27T12:43:31.288Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c8740bd36d8d49a1f371b0","quantity":2}
 2024-08-27T12:44:13.464Z info: Request URL: /api/cartItems | Request Body: {"productID":"66c37b093b561d1410496d31","quantity":1}
 2024-08-27T12:44:49.232Z info: Request URL: /api/orders/ | Request Body: {}
+2024-08-28T09:38:43.697Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-28T09:38:43.756Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-28T14:55:58.468Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayur","type":"Seller"}
+2024-08-28T14:55:58.518Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayur","type":"Seller"}
+2024-08-28T14:56:22.854Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T14:56:22.855Z info: Request URL: /signup | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T14:58:22.017Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T14:58:22.018Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T14:59:48.805Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T14:59:48.816Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T15:06:45.037Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T15:06:45.048Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"mayurm","type":"Seller"}
+2024-08-28T15:09:48.741Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
+2024-08-28T15:09:48.746Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
+2024-08-28T15:13:15.303Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
+2024-08-28T15:13:15.368Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}

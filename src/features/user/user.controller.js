@@ -13,6 +13,7 @@ export class UserController {
   async signUp(req, res, next) {
     try {
       const { name, email, password, type } = req.body;
+      console.log({ name, email, password, type });
 
       //hash the password before sending the data
       const hashPassword = await bcrypt.hash(password, 12);
@@ -29,7 +30,8 @@ export class UserController {
       res.status(201).json({ success: newUser });
     } catch (err) {
       console.log(err);
-      next(new ApplicationError("Something is wrong in sign up", 500));
+      next(err);
+      throw new ApplicationError("Something is wrong in sign up", 500);
     }
   }
 
@@ -58,7 +60,8 @@ export class UserController {
       }
     } catch (err) {
       console.log(err);
-      next(new ApplicationError("Problem With sign In", 400));
+      next(err);
+      throw new ApplicationError("Problem With sign In", 400);
     }
   }
   async resetPassword(req, res, next) {
@@ -73,7 +76,8 @@ export class UserController {
       res.status(200).send("Password Reset successfully");
     } catch (err) {
       console.log(err);
-      next(new ApplicationError("Something is wrong in sign up", 500));
+      next(err);
+      throw new ApplicationError("Something is wrong in sign up", 500);
     }
   }
 }
