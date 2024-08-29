@@ -253,3 +253,26 @@
 2024-08-29T06:22:56.096Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
 2024-08-29T06:23:09.443Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4}
 2024-08-29T06:23:16.219Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4}
+2024-08-29T15:04:50.012Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T15:04:50.024Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T15:17:57.020Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","Price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:18:18.765Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","Price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:18:46.665Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","Price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:20:03.704Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","Price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:21:18.653Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:26:52.517Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T15:30:59.230Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:29:50.032Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:32:15.965Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:36:02.111Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:37:12.568Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:44:20.210Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:46:43.934Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:47:35.935Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T18:48:02.639Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:14:53.068Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:16:47.288Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:19:12.167Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:26:31.306Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:31:33.072Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
+2024-08-29T19:32:24.608Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d0c25efb0113a2c33270a8,66d0c25efb0113a2c33270aa"}

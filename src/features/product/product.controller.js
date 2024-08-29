@@ -16,14 +16,14 @@ class ProductController {
   //integrated with mongodb and product.repository.js
   async addProduct(req, res) {
     try {
-      const { name, price, sizes } = req.body;
+      const { name, price, sizes, categories, description } = req.body;
       const newProduct = new ProductModel(
         name,
-        null,
+        description,
         parseFloat(price),
-        req.file.filename,
-        null,
-        sizes.split(",")
+        req?.file?.filename,
+        categories,
+        sizes?.split(",")
       );
       const createdProduct = await this.productRepository.add(newProduct);
       res.status(201).send(createdProduct);
