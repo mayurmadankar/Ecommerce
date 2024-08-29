@@ -39,7 +39,7 @@ class ProductController {
       const productID = req.body.productID;
       const rating = req.body.rating;
 
-      await this.productRepository.rateProduct(userID, productID, rating);
+      await this.productRepository.rate(userID, productID, rating);
       return res.status(200).send("Rating as been added");
     } catch (err) {
       console.log("passing error to middleware");

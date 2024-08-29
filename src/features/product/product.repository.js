@@ -1,7 +1,12 @@
 import { ObjectId } from "mongodb";
 import { getDB } from "../../config/mongodb.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
-// import { parse } from "dotenv";
+import mongoose from "mongoose";
+import { productSchema } from "./product.schema.js";
+import { reviewSchema } from "./review.schema.js";
+
+const ProductModel = mongoose.model("Product", productSchema);
+const ReviewModel = mongoose.model("Review", reviewSchema);
 
 export default class ProductRepository {
   constructor() {
@@ -70,24 +75,52 @@ export default class ProductRepository {
     }
   }
   // rate the product it is easy way
-  async rateProduct(userID, productID, rating) {
+  // async rateProduct(userID, productID, rating) {
+  //   try {
+  //     const db = getDB();
+  //     const collection = db.collection(this.collection);
+  //     //pull existing rating and update them
+  //     await collection.updateOne(
+  //       {
+  //         _id: new ObjectId(productID)
+  //       },
+  //       {
+  //         $pull: { ratings: { userID: new ObjectId(userID) } }
+  //       }
+  //     );
+  //     //push the rating if there is no one
+  //     await collection.updateOne(
+  //       { _id: new ObjectId(productID) },
+  //       { $push: { ratings: { userID: new ObjectId(userID), rating } } }
+  //     );
+  //   } catch (err) {
+  //     console.log(err);
+  //     throw new ApplicationError("Something went wrong with database", 500);
+  //   }
+  // }
+  async rate(userID, productID, rating) {
     try {
-      const db = getDB();
-      const collection = db.collection(this.collection);
-      //pull existing rating and update them
-      await collection.updateOne(
-        {
-          _id: new ObjectId(productID)
-        },
-        {
-          $pull: { ratings: { userID: new ObjectId(userID) } }
-        }
-      );
-      //push the rating if there is no one
-      await collection.updateOne(
-        { _id: new ObjectId(productID) },
-        { $push: { ratings: { userID: new ObjectId(userID), rating } } }
-      );
+      //1.check if product exists
+      const productToUpdate = await ProductModel.findById(productID);
+      if (!productToUpdate) {
+        throw new Error("Product not found");
+      }
+      //2.Get the existing review
+      const userReview = await ReviewModel.findOne({
+        product: new ObjectId(productID),
+        user: new ObjectId(userID)
+      });
+      if (userReview) {
+        userReview.rating = rating;
+        await userReview.save();
+      } else {
+        const newReview = new ReviewModel({
+          product: new ObjectId(productID),
+          user: new ObjectId(userID),
+          rating: rating
+        });
+        newReview.save();
+      }
     } catch (err) {
       console.log(err);
       throw new ApplicationError("Something went wrong with database", 500);

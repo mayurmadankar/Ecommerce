@@ -248,3 +248,8 @@
 2024-08-28T15:09:48.746Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
 2024-08-28T15:13:15.303Z info: Request URL: /api/users/signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
 2024-08-28T15:13:15.368Z info: Request URL: /signup | Request Body: {"name":"Mayur Madankar","email":"mayurmadankar312@gmail.com","password":"Mayur@123","type":"Customer"}
+2024-08-29T06:22:46.324Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4}
+2024-08-29T06:22:56.096Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T06:22:56.096Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T06:23:09.443Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4}
+2024-08-29T06:23:16.219Z info: Request URL: /api/products/rate | Request Body: {"productID":"66c4eb91ff97247da0616a05","rating":4}
