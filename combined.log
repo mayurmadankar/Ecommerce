@@ -276,3 +276,12 @@
 2024-08-29T19:26:31.306Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
 2024-08-29T19:31:33.072Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d058553905f756a690342e,66d058553905f756a6903430"}
 2024-08-29T19:32:24.608Z info: Request URL: /api/products/ | Request Body: {"name":"Amazon Kindle","price":15000,"description":"E-Book reader by Amazon","categories":"66d0c25efb0113a2c33270a8,66d0c25efb0113a2c33270aa"}
+2024-08-29T21:34:00.797Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T21:34:00.800Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-29T21:39:17.774Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:41:40.006Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:44:06.213Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:45:19.977Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:45:55.578Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:48:51.238Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-29T21:51:05.407Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
