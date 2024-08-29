@@ -27,10 +27,7 @@ export default class ProductRepository {
       // 2. Update categories.
       const updateCategory = await CategoryModel.updateMany(
         { _id: { $in: productData.categories } },
-        { $push: { products: new ObjectId(savedProduct._id) } },
-        {
-          new: true
-        }
+        { $push: { products: new ObjectId(savedProduct._id) } }
       );
       console.log(updateCategory);
     } catch (err) {

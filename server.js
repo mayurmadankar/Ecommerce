@@ -22,6 +22,7 @@ import { errorHandlerMiddleware } from "./src/middleware/applicantionError.middl
 import { connectToMOngoDB } from "./src/config/mongodb.js";
 import OrderRouter from "./src/features/order/order.routes.js";
 import { connectUsingMongoose } from "./src/config/mongoseConfig.js";
+import LikeRouter from "./src/features/like/like.routes.js";
 
 //2.create serv`er
 const server = express();
@@ -51,6 +52,8 @@ server.use("/api/cartItems", jwtAuth, cartRouter);
 server.use("/api/users", userRouter);
 //for all APIs of OrderRouter,redirect from OrderRouter
 server.use("/api/orders", jwtAuth, OrderRouter);
+//for all APIs of LikeRouter,redirect from LikeRouter
+server.use("/api/likes", jwtAuth, LikeRouter);
 
 //3.Default request handler
 server.get("/", (req, res) => {
