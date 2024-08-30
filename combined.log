@@ -285,3 +285,14 @@
 2024-08-29T21:45:55.578Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
 2024-08-29T21:48:51.238Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
 2024-08-29T21:51:05.407Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66d0cc95a6d9c0501c2ab9a8"}
+2024-08-30T11:52:06.143Z info: Request URL: /api/users/signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-30T11:52:06.159Z info: Request URL: /signin | Request Body: {"name":"Mayur","email":"mafiaop312@gmail.com","password":"mayurmadankar","type":"Seller"}
+2024-08-30T11:52:32.210Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66c37b093b561d1410496d31"}
+2024-08-30T11:53:38.130Z info: Request URL: /api/likes | Request Body: {"type":"Product","id":"66c37b093b561d1410496d31"}
+2024-08-30T11:58:38.810Z info: Request URL: /api/likes?id=66d0eb14a3da22be7700c572&type=Product | Request Body: {"type":"Product","id":"66c37b093b561d1410496d31"}
+2024-08-30T11:58:57.693Z info: Request URL: /api/likes?id=66d0eb14a3da22be7700c572&type=Product | Request Body: {"type":"Product","id":"66c37b093b561d1410496d31"}
+2024-08-30T12:01:43.145Z info: Request URL: /api/likes?id=66d0eb14a3da22be7700c572&type=Product | Request Body: {}
+2024-08-30T12:02:39.571Z info: Request URL: /api/likes?id=66c37b093b561d1410496d31&type=Product | Request Body: {}
+2024-08-30T12:02:58.269Z info: Request URL: /api/likes?id=66c37b093b561d1410496d31&type=Product | Request Body: {}
+2024-08-30T12:03:08.469Z info: Request URL: /api/likes?id=66c37b093b561d1410496d31&type=Product | Request Body: {}
+2024-08-30T12:06:15.936Z info: Request URL: /api/likes?id=66c37b093b561d1410496d31&type=Product | Request Body: {"id":"66c37b093b561d1410496d31","type":"Product"}

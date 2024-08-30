@@ -8,10 +8,7 @@ const url = process.env.DB_URL;
 export const connectUsingMongoose = () => {
   try {
     mongoose
-      .connect(url, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      })
+      .connect(url)
       .then(() => {
         console.log("MongoDB connected using mongoose");
         addCategories();
