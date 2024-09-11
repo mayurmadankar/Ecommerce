@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { userSchema } from "./user.Schema.js";
+import { userSchema } from "./user.schema.js";
 import { ApplicationError } from "../../middleware/applicantionError.middleware.js";
 
 //creating the model from schema
