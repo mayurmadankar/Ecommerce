@@ -12,7 +12,7 @@ import userRouter from "./src/features/user/user.routes.js";
 //jwtAuth for whenever user want information they want to login through token
 import jwtAuth from "./src/middleware/jwt.middleware.js";
 import cartRouter from "./src/features/cart/cartitems.router.js";
-import apiDocs from "./swagger.json";
+// import apiDocs from "./swagger.json";
 import fs from "fs";
 
 const apiDocs = JSON.parse(fs.readFileSync("./swagger.json", "utf-8"));
